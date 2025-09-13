@@ -1,0 +1,117 @@
+.listagem {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    &__acoes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        &__botao {
+            font-family: 'Roboto', sans-serif;
+            color: black;
+            background-color: #dc946a;
+            border-radius: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease; 
+            border: none; 
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            &:hover {
+                background-color: white;
+                box-shadow: 0 6px 12px rgba(74, 144, 226, 0.3);
+                transform: scale(1.05);
+                transition: scale 0.5s;
+                scale: 1.1;
+            }
+            &__acoes__botao:focus {
+                outline: none; 
+                box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.2); 
+            }
+        }
+        &__filtros {
+            font-family: 'Roboto', sans-serif;
+            color: var(--cor-primaria);
+            background-color: none;
+            border-radius: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease; 
+            border: none; 
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            width: 750px;
+           & input {
+                width: 100%;
+                padding: 0.02rem;
+                border: 1px solid #ddd;
+                border-radius: 0.5rem;
+                font-size: 1rem;
+                font-family: 'Roboto', sans-serif;
+                color: #333;
+                margin-right: 10px;
+                width: 740px;
+            }
+            &__acoes__filtros:focus {
+                outline: none; 
+                box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.2); 
+            }
+        }
+    }
+    &__visualizacao {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        &__cartoes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            justify-items: center;
+        }
+    }
+    .botao-voltar {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1rem;
+        color: #333;
+        background: none;
+        border: 1px solid #101010; 
+        border-radius: 1rem; 
+        border: 1px solid #333;
+        cursor: pointer;
+        padding: 0.5rem 1.5rem;
+        font-weight: bold;
+        position: fixed;
+        bottom: 1rem; 
+        right: 1rem; 
+        width: auto;
+        height: auto;
+        text-align: left;
+    }
+    
+    .icone-voltar {
+        margin-right: 0.5rem; 
+        font-size: 1.2rem;
+    }
+
+}
+
+.sem-itens {
+    padding: 1rem;
+    text-align: center;
+}

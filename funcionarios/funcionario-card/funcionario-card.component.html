@@ -1,0 +1,22 @@
+<div class="cartao" (click)="redirecionaParaAtualizar()">
+    <img 
+        class="cartao__img" 
+        src="https://github.com/defreitasabner.png" 
+        [alt]="dados.pessoa.nome"
+    >
+    <div class="cartao__conteudo">
+        <h3 class="cartao__nome">{{ dados.pessoa.nome }}</h3>
+        <div class="cartao__info">
+            <mat-icon fontIcon="home"></mat-icon>
+            {{ exibirEndereco() }}
+        </div>
+        <div class="cartao__info">
+            <mat-icon fontIcon="phone"></mat-icon>
+            {{ exibirTelefones() }}
+        </div>
+        <div class="cartao__info">
+            <mat-icon fontIcon="email"></mat-icon>
+            {{ dados.usuario?.email }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<mat-form-field class="date-picker">
+    <mat-label>{{ label }}</mat-label>
+    <input 
+        matInput 
+        [ngxMatDatetimePicker]="picker"
+        [formControl]="control"
+        [disabled]="true"
+        [min]="dataMinima"
+        [max]="dataMaxima"
+    >
+    <mat-hint>{{ hint }}</mat-hint>
+    <ngx-mat-datepicker-toggle matIconSuffix [for]="picker" />
+    <ngx-mat-datetime-picker 
+        #picker
+        [showSeconds]="false"
+        [hideTime]="!incluirHora"
+    />
+</mat-form-field>

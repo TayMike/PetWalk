@@ -1,0 +1,22 @@
+<div class="cartao" (click)="redirecionaParaAtualizar()">
+    <img 
+        class="cartao__img" 
+        src="https://github.com/defreitasabner.png" 
+        [alt]="dados.nome"
+    >
+    <div class="cartao__conteudo">
+        <h3 class="cartao__nome">{{ dados.nome }}</h3>
+        <div class="cartao__info">
+            <mat-icon fontIcon="pets"></mat-icon>
+            <small>{{ dados.categoria?.id }}</small>
+        </div>
+        <div class="cartao__info">
+            <mat-icon fontIcon="person"></mat-icon>
+            <p>{{ dados.tutor?.pessoa?.nome }}</p>
+        </div>
+        <div class="cartao__info" *ngFor="let telefone of dados.tutor?.pessoa?.telefones">
+            <mat-icon fontIcon="phone"></mat-icon>
+            <p>{{ telefone.numero  }}</p>
+        </div>
+    </div>
+</div>
